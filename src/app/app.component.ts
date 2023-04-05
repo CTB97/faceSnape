@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, map, Observable } from 'rxjs';
 import { FaceSnape } from './models/face-snap.model';
 
 @Component({
@@ -7,24 +8,17 @@ import { FaceSnape } from './models/face-snap.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent  implements OnInit{
-  mySnap!:FaceSnape;
-  mySnap1!:FaceSnape;
+
+  interval$!: Observable<string>;
+  
   ngOnInit(){
-    
-    this.mySnap={
-      title:'Archibald',
-      description:'Mon meilleur ami depuis tout petit !',
-      createdDate:new Date(),
-      snaps:7,
-      imageUrl:'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
-      location:'Dakar'
-    }
-    this.mySnap1={
-      title:'Archibald',
-      description:'Mon meilleur ami depuis tout petit !',
-      createdDate:new Date(),
-      snaps:7,
-      imageUrl:'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
-    }
+
+    /* this.interval$ = interval(1000).pipe(
+      map(value => value % 2 === 0 ?
+          `Je suis ${value} et je suis pair` :
+          `Je suis ${value} et je suis impair`
+      )
+  ); */
+
   }
 }

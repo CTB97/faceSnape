@@ -1,12 +1,13 @@
 export class FaceSnape{
 
 
-    title!:String;
-    description!:String;
+    id!:number;
+    title!:string;
+    description!:string;
     createdDate!:Date;
     snaps!:number;
-    imageUrl!:String;
-    location?:String
+    imageUrl!:string;
+    location?:string
 
 
 }
